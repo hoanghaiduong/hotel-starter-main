@@ -3,13 +3,12 @@ import CheckIn from "./CheckIn";
 import AdultsDropdown from "./AdultsDropdown";
 import KidsDropdown from "./KidsDropdown";
 import CheckOut from "./CheckOut";
-
-import { HotelContext } from "../context/HotelContext";
+import { RoomContext } from "../context/RoomContext";
 
 const BookForm = () => {
-  const { handleClick } = useContext(HotelContext);
+  const {handleClick}=useContext(RoomContext)
   return (
-    <form className="h-[300px]  w-full lg:h-[70px]">
+    <form className="h-[300px]  w-full lg:h-[70px]" >
       <div className="flex flex-col w-full h-full lg:flex-row ">
         <div className="flex-1 border-r">
           <CheckIn />
@@ -23,13 +22,7 @@ const BookForm = () => {
         <div className="flex-1 border-r">
           <KidsDropdown />
         </div>
-        <button
-          type="button"
-          onClick={(e) => handleClick(e)}
-          className="btn btn-primary"
-        >
-          Check now
-        </button>
+        <button type="button" onClick={(e)=>handleClick(e)} className="btn btn-primary">Check now</button>
       </div>
     </form>
   );

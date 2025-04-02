@@ -23,7 +23,7 @@ const RoomProvider = ({ children }) => {
   };
   return (
     <RoomContext.Provider
-      value={{ rooms, adults, setAdults, kids, setKids, handleClick, loading }}
+      value={{ rooms, adults, setAdults, kids, setKids, handleClick ,loading}}
     >
       {children}
     </RoomContext.Provider>

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { RoomContext } from "../context/RoomContext";
 import { Menu } from "@headlessui/react";
-import { HotelContext } from "../context/HotelContext";
 const lsAdults = [
   { name: "1 Adult", value: 1 },
   { name: "2 Adult", value: 2 },
@@ -9,7 +8,7 @@ const lsAdults = [
   { name: "4 Adult", value: 4 },
 ];
 const AdultsDropdown = () => {
-  const { adults, setAdults } = useContext(HotelContext);
+  const { adults, setAdults } = useContext(RoomContext);
   return (
     <Menu as="div" className={"w-full h-full bg-white relative"}>
       <Menu.Button

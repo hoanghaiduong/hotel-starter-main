@@ -4,29 +4,25 @@ import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import RoomDetails from "./pages/RoomDetails";
-import MainLayout from "./components/MainLayout";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "room/:id",
-        element: <RoomDetails />,
-      },
-    ],
+    element: <Home />,
+  },
+  {
+    path: "/room/:id",
+    element: <RoomDetails />,
   },
 ]);
 
 const App = () => {
+  
   return (
     <div>
+      <Header />
       <RouterProvider router={routes} />
+      <Footer />
     </div>
   );
 };
